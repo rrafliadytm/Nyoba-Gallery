@@ -1,0 +1,161 @@
+/* Font*/
+@font-face {
+    font-family: 'amble-regular';
+    src: url(/font/amble-regular-webfont.woff) format('woff');
+}
+
+
+/* Style */
+body {
+    font: bolder 20px 'amble-regular';
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 0 0 5px white;
+}
+
+.container {
+    width: 600px;
+    height: 150px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 5px rgba(6, 6, 6, 0.44);
+    border-radius: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery li,
+.gallery li .thumb,
+.gallery li span {
+    border-radius: 50%;
+}
+
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(6, 6, 6, 0.44);
+    margin-top: 15px;
+    position: relative;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.655);
+    height: 120px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+    opacity: 0;
+    transition: 0.75;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: 0.3s ease-out;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.682);
+}
+
+.overlay img {
+    margin-top: 15rem;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.022));
+}
+
+.overlay:target img {
+    animation: image-ani 0.7s forwards;
+}
+
+.close-btn {
+    width: 70px;
+    position: absolute;
+    top: -100px;
+    transition: .3s;
+}
+
+.close-btn:hover {
+    transform: scale(1.5);
+}
+
+/* Navigation */
+
+.next {
+    width: 54px;
+    height: 87px;
+    background-image: url(/asset/next-icon.png);
+    position: absolute;
+    top: 25rem;
+    margin-left: 5rem;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.257));
+    text-indent: -9999%;
+}
+
+.previous {
+    width: 54px;
+    height: 87px;
+    background-image: url(/asset/previous-icon.png);
+    position: absolute;
+    top: 25rem;
+    margin-left: -10rem;
+    filter: drop-shadow(0 0 15px rgb(0, 0, 0, .257));
+    text-indent: -9999%;
+}
+
+.next,
+.previous {
+    transition: 0.3s;
+}
+
+.next:hover {
+    transform: scale(1.15);
+}
+
+.previous:hover {
+    transform: scale(1.15);
+}
+
+/* Animation */
+
+@keyframes image-ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

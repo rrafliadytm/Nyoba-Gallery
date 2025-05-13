@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Scenery Gallery</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Nature Scenery</h1>
+    
+    <div class="container">
+    
+        <ul class="gallery">
+            <li>
+                <a href="#coast-overlay">
+                    <img class="thumb" src="asset/thumbs/coast-thumbs.jpg" alt="coast">
+                    <span>Coast</span>
+                </a>
+                <div class="overlay" id="coast-overlay">
+                    <a href="#"><img class="close-btn" src="asset/close-icon.png" alt="close"></a>
+                    <a href="#mountain-overlay" class="previous">previous</a>
+                    <img src="asset/full/coast.jpg" alt="coast-full">
+                    <a href="#forest-overlay" class="next">next</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="#forest-overlay">
+                    <img class="thumb" src="asset/thumbs/forest-thumbs.jpg" alt="forest">
+                    <span>Forest</span>
+                </a>
+                <div class="overlay" id="forest-overlay">
+                    <a href="#"><img class="close-btn" src="asset/close-icon.png" alt=""></a>
+                    <a href="#coast-overlay" class="previous">previous</a>
+                    <img src="asset/full/forest.jpg" alt="forest-full">
+                    <a href="#sea-overlay" class="next">next</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="#sea-overlay">
+                    <img class="thumb" src="asset/thumbs/sea-thumbs.jpg" alt="sea">
+                    <span>Sea</span>
+                </a>
+                <div class="overlay" id="sea-overlay">
+                    <a href="#"><img class="close-btn" src="asset/close-icon.png" alt=""></a>
+                    <a href="#forest-overlay" class="previous">previous</a>
+                    <img src="asset/full/sea.jpg" alt="sea-full">
+                    <a href="#mountain-overlay" class="next">next</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="#mountain-overlay">
+                    <img class="thumb" src="asset/thumbs/mountain-thumbs.jpg" alt="mountain">
+                <span>Mountain</span>
+                </a>
+                <div class="overlay" id="mountain-overlay">
+                    <a href="#"><img class="close-btn" src="asset/close-icon.png" alt=""></a>
+                    <a href="#sea-overlay" class="previous">previous</a>
+                    <img src="asset/full/mountain.jpg" alt="mountain-full">
+                    <a href="#coast-overlay" class="next">next</a>
+                </div>
+
+            </li>
+            
+        </ul>
+
+    </div>
+    
+</body>
+
+</html>
